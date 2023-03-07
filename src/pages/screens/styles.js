@@ -5,7 +5,7 @@ export default styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#C8B3EE'
+    backgroundColor: '#4a80d9'
   },
 
   containerLogo: {
@@ -24,30 +24,33 @@ export default styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    width: '90%',
-    paddingBottom: 25
+    width: '80%',
+    paddingBottom: 80
   },
 
   input: {
-    backgroundColor: '#C8B3EE',
+    backgroundColor: '#4a80d9',
     width: '90%',
-    marginBottom: 15,
-    color: '#222',
+    marginBottom: 5,
+    color: '#FFF',
     fontSize: 22,
-    borderRadius: 7,
     padding: 10,
-    borderWidth:2,
-    borderRadius:20
-
+    borderWidth: 2,
+    borderRadius:15,
+    borderColor: '#FFF',
   },
 
   buttonSubmit: {
-    backgroundColor: '#582770',
+    backgroundColor: '#2e9699',
     width: '90%',
     height: 45,
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: 7
+    borderRadius: 50,
+    borderColor:'#FFF',
+    marginTop: 25, 
+    borderWidth: 1,
+    borderColor:'#FFF'
   },
 
   submitText: {
@@ -56,10 +59,10 @@ export default styles = StyleSheet.create({
   },
 
   buttonRegister: {
-    marginTop: 10
+    marginTop: 5  
   },
 
   registerText: {
-    color: '#000000'
+    color: '#FFF'
   }
 });

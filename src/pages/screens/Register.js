@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import
   {
     KeyboardAvoidingView,
@@ -8,22 +9,20 @@ import
     TextInput,
     TouchableOpacity,
     Animated,
-    Keyboard
+    Keyboard,
+    
+   
   } from 'react-native';
+
+
 
 import styles from './styles';
 
 export default function App({navigation}) {
   const [offset] = useState(new Animated.ValueXY({ x: 0, y: 80 }));
   const [opacity] = useState(new Animated.Value(0));
-  const [logo] = useState(new Animated.ValueXY({ x: 170, y: 195 }));
+  const [logo] = useState(new Animated.ValueXY({ x: 300, y: 195 }));
 
-  const entrar = () => {
-    navigation.reset({
-      index:0,
-      routes: [{name: "register"}]
-    })
-  }
 
   useEffect(() => {
     keyboardDidShowListener
@@ -86,7 +85,7 @@ export default function App({navigation}) {
               width: logo.x,
               height: logo.y
             }}
-            source={require('../assets/logo.png')}
+            source={require('../../assets/logo.png')}
           />
         </View>
 
@@ -103,6 +102,30 @@ export default function App({navigation}) {
         ]}>
           <TextInput
             style={styles.input}
+            placeholder="Nome de usuário"
+            keyboardType="email-address"
+            textContentType="emailAddress"
+            autoCapitalize="none"
+            autoCompleteType="email"
+            autoCorrect={false}
+            onChangeText={() => {}}
+            placeholderTextColor='white'  
+          />
+
+         <TextInput
+            style={styles.input}
+            placeholder="Nome Completo"
+            keyboardType="email-address"
+            textContentType="emailAddress"
+            autoCapitalize="none"
+            autoCompleteType="email"
+            autoCorrect={false}
+            onChangeText={() => {}}
+            placeholderTextColor='white'  
+          />
+
+         <TextInput
+            style={styles.input}
             placeholder="Email"
             keyboardType="email-address"
             textContentType="emailAddress"
@@ -110,7 +133,9 @@ export default function App({navigation}) {
             autoCompleteType="email"
             autoCorrect={false}
             onChangeText={() => {}}
+            placeholderTextColor='white'  
           />
+
 
           <TextInput
             style={styles.input}
@@ -122,18 +147,20 @@ export default function App({navigation}) {
             autoCorrect={false}
             secureTextEntry={true}
             onChangeText={() => {}}
+            placeholderTextColor='white'  
           />
 
           <TouchableOpacity style={styles.buttonSubmit}>
-            <Text style={styles.submitText}>Acessar</Text>
+            <Text style={styles.submitText}>Cadastrar</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.buttonRegister}>
-            <button onPress={() => entrar()} style={styles.registerText}>Não tem uma conta? Crie já!</button>
-            
-          </TouchableOpacity>
+          {/* <TouchableOpacity style={styles.buttonRegister}>
+            <Text onPress={() => navigation.navigate('Login',)} style={styles.registerText}>Já tem uma conta?</Text>
+          </TouchableOpacity> */}
+
         </Animated.View>
       </KeyboardAvoidingView>
+
     </>
   );
 };
