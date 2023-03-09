@@ -8,6 +8,8 @@ import Register from './src/pages/screens/Register';
 import Inicio from './src/pages/screens/Inicio';
 import Perfil from './src/pages/screens/Perfil';
 import Pesquisar from './src/pages/screens/Pesquisar'
+import Serviços from './src/pages/screens/Serviços'
+import SobreHarpia from './src/pages/screens/SobreHarpia'
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
@@ -36,12 +38,12 @@ function HomeTabs() {
       />
 
       <Tab.Screen 
-      name="Perfil" 
-      component={Perfil} 
+      name="Serviços" 
+      component={Serviços} 
       options={{
-        tabBarLabel: 'Perfil',
+        tabBarLabel: 'Serviços',
         tabBarIcon: ({ color, size }) => (
-          <Ionicons name="person" color={color} size={size} />
+          <Ionicons name="navigate" color={color} size={size} />
         ),
       }}
       />
@@ -56,6 +58,30 @@ function HomeTabs() {
         ),
       }}
       />
+      
+      <Tab.Screen 
+      name="Sobre Harpia" 
+      component={SobreHarpia} 
+      options={{
+        tabBarLabel: 'Sobre Harpia',
+        tabBarIcon: ({ color, size }) => (
+          <Ionicons name="eye-outline" color={color} size={size} />
+        ),
+      }}
+      />   
+
+      <Tab.Screen 
+      name="Perfil" 
+      component={Perfil} 
+      options={{
+        tabBarLabel: 'Perfil',
+        tabBarIcon: ({ color, size }) => (
+          <Ionicons name="person" color={color} size={size} />
+        ),
+      }}
+      />
+
+   
     </Tab.Navigator>
   );
 }

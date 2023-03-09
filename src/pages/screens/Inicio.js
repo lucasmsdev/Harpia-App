@@ -60,7 +60,7 @@ export default function App({navigation}) {
               style={styles.productImage}
             />
             <View style={styles.productInfo}>
-              <Text style={styles.productName}>Batom Premium</Text>
+              <Text style={styles.productName}>Batom Premium 3</Text>
               <Text style={styles.productPrice}>R$ 49,99</Text>
               <Text style={styles.productDescription}>Fique linda com este batom!</Text>
               <Text style={styles.productLink}>Comprar</Text>
@@ -72,7 +72,7 @@ export default function App({navigation}) {
               style={styles.productImage}
             />
             <View style={styles.productInfo}>
-              <Text style={styles.productName}>Batom Premium</Text>
+              <Text style={styles.productName}>Batom Premium 4</Text>
               <Text style={styles.productPrice}>R$ 49,99</Text>
               <Text style={styles.productDescription}>Fique linda com este batom!</Text>
               <Text style={styles.productLink}>Comprar</Text>
@@ -84,7 +84,7 @@ export default function App({navigation}) {
               style={styles.productImage}
             />
             <View style={styles.productInfo}>
-              <Text style={styles.productName}>Batom Premium</Text>
+              <Text style={styles.productName}>Batom Premium 2</Text>
               <Text style={styles.productPrice}>R$ 49,99</Text>
               <Text style={styles.productDescription}>Fique linda com este batom!</Text>
               <Text style={styles.productLink}>Comprar</Text>
